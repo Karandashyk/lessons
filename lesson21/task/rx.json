@@ -1,0 +1,17 @@
+{
+    "name": "helloapp",
+    "version": "1.0.0",
+    "description": "First Angular 6 Project",
+    "author": "Eugene Popov <metanit.com>",
+    "scripts": {
+        "dev": "webpack-dev-server --hot --open",
+        "build": "webpack"
+    },
+    "dependencies": {
+        "rxjs": "^6.1.0",
+        // остальное содержимое секции
+    },
+    "devDependencies": {
+        // содержимое секции
+    }
+}

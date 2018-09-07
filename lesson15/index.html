@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #15</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>Области видимости</li>
+			<li>Замыкания</li>
+			<li>setTimeout</li>
+			<li>setInterval</li>
+			<li>Контекст</li>
+			<li>Дескприпторы</li>
+			<li>Конструкторы</li>
+			<li>Статические свойства методы</li>
+		</ul>
+	</section>
+
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>Call</li>
+			<li>Apply</li>
+			<li>Bind</li>
+			<li>JSON</li>
+			<li>Try catch</li>
+			<li>Начало ООП</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Call</h2>
+		<p>
+			<ul>
+				<li>Вызов функции в другом контексте</li>
+			</ul>
+		</p>
+
+		<p>Написать вызов функции, чтобы она вывела массив [1,2,3] и 'test'</p>
+		<p>function logArray(params1) { console.log(this); console.log(param1); }</p>
+
+		<p><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Function/call">Документация</a></p>
+	</section>
+	
+	<section class="slide">
+		<p>Вызвать функцию таким образом, чтобы получить тест "test" </p>
+		
+		<div>
+			<img style="width: 400px;" src="./pictures/call.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide">
+		<p>Вызвать функцию таким образом, чтобы получить тест "test" передавая ключ вывода</p>
+
+		<div>
+			<img style="width: 400px;" src="./pictures/call2.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Apply</h2>
+		<p>
+			<ul>
+				<li>Вызов в другом контексте с передачей массива аргументов</li>
+			</ul>
+		</p>
+
+		<p>function Human(firstName, secondName) { ... }</p>
+		<p>function Student() { ... }</p>
+		<p>Вызвоть родительский конструктор с передвчей arguments</p>
+		<p><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">Документация</a></p>
+	</section>
+
+	<section class="slide">
+		<p>Вызвать функцию таким образом, чтобы получить тест "This is Ivan Ivanov" передавая ключ вывода</p>
+
+		<div>
+			<img style="width: 400px;" src="./pictures/apply.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Bind</h2>
+
+		<div style="font-size: 18px;">
+			<ul>
+				<li>Создание новой функции с установленым контекстом</li>
+				<li>Каррирование</li>
+			</ul>
+			<p>Получить новую функцию с установленым контекстом (и еще раз повторить уже на новой)</p>
+			<p>function logArray(params1) { console.log(this); console.log(param1); }</p>
+		</div>
+
+
+		<div style="font-size: 16px">
+			<p><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Документация</a></p>
+			<p><a href="https://habr.com/post/199456/">Call, Apply, Bind</a></p>
+			<p><a href="https://habr.com/sandbox/33838/">Интересно</a></p>
+			<p><a href="https://getinstance.info/articles/javascript/call-apply-and-bind-functions/">Еще</a></p>
+		</div>
+
+	</section>
+
+	<section class="slide">
+		<p>Реализовать функцию mul с и без использования bind</p>
+
+		<div>
+			<img style="width: 400px;" src="./pictures/bind.png" alt="">
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<h2>JSON</h2>
+		<p>
+		<ul>
+			<li>JSON.stringify(value, replacer, space)</li>
+			<li>JSON.parse(str, function(key, value) {...})</li>
+		</ul>
+		</p>
+		<p>Перевести объект в JSON и обратно</p>
+
+		<div style="font-size: 16px">
+			<p><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">Документация</a></p>
+			<p><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">Документация</a></p>
+			<p><a href="https://alligator.io/js/json-parse-stringify/">Читать</a></p>
+		</div>
+
+	</section>
+
+	<section class="slide">
+		<h2>try catch</h2>
+		<p>
+		<ul>
+			<li>try{} catch(e) {} finally {}</li>
+			<li>throw</li>
+		</ul>
+		</p>
+		<p>Перехватить ошибку var test; console.log(test.test)</p>
+		<div style="font-size: 16px">
+			<p><a href="https://www.w3schools.com/js/js_errors.asp">Документация</a></p>
+			<p><a href="https://codeburst.io/learn-how-to-handle-javascript-errors-with-try-throw-catch-finally-83b4f9ef8c6f">Интересно</a></p>
+		</div>
+
+	</section>
+
+	<section class="slide">
+		<ul>
+			<li>Создать объект user с firstName и lastName</li>
+			<li>Перевести его в JSON заменив при этом значение lastName на test</li>
+			<li>К результату добавить + '123'</li>
+			<li>Перевести обратно в объект</li>
+			<li>Обернуть в try catch для вывода ошибки</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>ООП</h2>
+
+		<p>
+		<ul>
+			<li>Инкапсуляция</li>
+			<li>Наследование</li>
+			<li>Полиморфизм</li>
+		</ul>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Инкапсуляция</h2>
+
+		<p>
+			<ul>
+				<li>Упаковка данных и функций в единый компонент</li>
+			</ul>
+ 		</p>
+
+		<img src="./pictures/buffer.png" width="500" alt="">
+
+		<p>Реализовать функцию buffer с методами  get, set для обмена данными на одном уровне</p>
+	</section>
+
+	<section class="slide">
+		<h2>Наследование</h2>
+
+		<p>
+		<ul>
+			<li>Концепция объектно-ориентированного программирования, согласно которой абстрактный
+				тип данных может наследовать данные и функциональность некоторого существующего типа,
+				способствуя повторному использованию компонентов программного обеспечения.</li>
+			<li>Ссылка на объект внутри метода это же объекта</li>
+			<li>Потеря контекста</li>
+		</ul>
+
+		<p>Наследовать поля и методы родительского через apply/call</p>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Полиморфизм</h2>
+		<ul>
+			<li>Способность обьекта использовать методы производного класса, который не существует на момент создания базового</li>
+		</ul>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

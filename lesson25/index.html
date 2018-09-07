@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #25</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>Переменные let и const</li>
+			<li>Деструктуризация</li>
+			<li>Классы</li>
+			<li>Итераторы</li>
+			<li>Генераторы</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul style="font-size: 22px;">
+			<li>Модули</li>
+			<li>Proxy</li>
+			<li>Функции</li>
+			<li>Set, Map, WeakSet и WeakMap</li>
+			<li>Другие возможности ES6</li>
+			<li>Async/Await</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Модули</h2>
+
+		<p>
+			Модуль в ES6 это просто файл с кодом внутри.<br>
+			<ul style="font-size: 20px;">
+				<li>
+					export <br>
+					<img src="./pictures/module.jpg" width="40%">
+				</li>				
+			</ul>
+
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<p>
+			<ul style="font-size: 20px;">
+				<li>
+					import <br>
+					<img src="./pictures/module2.jpg">
+				</li>				
+			</ul>
+			Создать два модуля: первый экспортирует default class с конструктором, который определяет в поле "num" сумму двух чисел (переданных в конструктор); второй - 2 константные переменные с произвольными числами. Протестировать оба модуля: импортировать их, создать объект класса из первого модуля с переменными из второго модуля. <br>
+			Для использования модулей необходим Babel.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Proxy</h2>
+
+		<p>
+			Прокси (proxy) – объект, который перехватывает обращения к другому объекту и модифицирует их.<br><br>
+			let proxy = new Proxy(target, handler)
+			<ul >
+				<li>target – объект-цель, обращение к которому будет перехвачено.</li>	
+				<li>handler – объект-обработчик с методами-перехватчиками для модификации target.</li>			
+			</ul>
+
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<p>
+			Функции-перехватчики:
+			<ul style="font-size: 20px;">
+				<li>get</li>	
+				<li>set</li>		
+				<li>has</li>
+				<li>deleteProperty</li>	
+				<li>enumerate</li>
+				<li>apply</li>
+				<li>construct</li>
+			</ul>
+			Полное описание <a href="./lol.html">тут</a>
+			<br>
+			Написать код с использованием двух произвольных proxy с handler-функциями.
+
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Функции</h2>
+
+		<p>
+			В ES6 введены такие возможности для написания функций:
+			<ul >
+				<li>Параметры по умолчанию</li>	
+				<li>Оператор spread вместо arguments</li>		
+				<li>Деструктуризация в параметрах</li>
+				<li>Функции в блоке имеет блочную область видимости</li>	
+				<li>Функции стрелки => (не имеют arguments и this)</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Коллекция Map</h2>
+
+		<p>
+			Map – простой ассоциативный массив (коллекция) для хранения записей вида ключ:значение. <br>
+			let map = new Map()
+			<ul style="font-size: 22px;">	
+				<li>map.set(key, value)</li>		
+				<li>map.get(key)</li>
+				<li>map.size</li>	
+				<li>map.delete(key)</li>
+				<li>map.clear()</li>
+				<li>map.has(key)</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Итерирование в Map</h2>
+
+		<p>
+			<ul style="font-size: 22px;">
+				<li>map.keys()</li>	
+				<li>map.values()</li>		
+				<li>map.entries() - по умолчанию в for..of</li>
+				<br>
+				<li>forEach(value, key, map)</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Коллекция Set</h2>
+
+		<p>
+			Set – коллекция для хранения множества значений, позволяют сохранять уникальные значения любого типа (каждое значение может встречаться лишь один раз). <br>
+			let set = new Set()
+			<ul style="font-size: 22px;">	
+				<li>set.add(item)</li>		
+				<li>set.delete(item)</li>
+				<li>set.has(item)</li>	
+				<li>set.clear()</li>
+				<li>set.size</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Итерирование в Set</h2>
+
+		<p>
+			<ul style="font-size: 22px;">
+				<li>for..of</li>
+				<br>
+				<li>forEach(value, valueAgain, set)</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Коллекции WeakMap и WeakSet</h2>
+
+		<p>
+			WeakSet – коллекция аналогичная Set, элементами которой могут быть только объекты. Ссылки на эти объекты в WeakSet являются слабыми: если на объект, хранимый в WeakSet нет ни одной внешней ссылки, то сборщик мусора удалит этот объект.  <br>
+			WeakMap - коллекция аналогичная Map. В качестве ключей могут быть использованы только объекты, а значения могут быть произвольных типов. Из-за того, что ссылки являются слабыми, нельзя перебрать элементы итератором или forEach. <br>
+			Нет свойства size и clear().
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Строки-шаблоны</h2>
+
+		<p>
+			<ul>
+				<li>Pазрешён перевод строки.</li>
+				<li>Шаблонный вод переменных при помощи ${ }.</li>
+				<li>Функции шаблонизации - f(strings, ...values), где: <br>
+					strings - участки строки,<br>
+					(присутствует strings.raw - участки строки без интерпретации)<br>
+					values - переданные в строку-шаблон переменные.
+				</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Строчные методы ES6</h2>
+
+		<p>
+			<ul>
+				<li>str.includes(s)</li>
+				<li>str.endsWith(s)</li>
+				<li>str.startsWith(s)</li>
+				<li>str.repeat(times)</li>
+			</ul>
+			Написать функцию шаблонизатор, которая выполняет сложение и выводит ответ в формате "2 + 3 = 5", а также сохраняет пример и результат в Set/Map.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Нововведения в объекты ES6</h2>
+
+		<p>
+			<ul>
+				<li>
+					Короткое свойство <br>
+					<img src="./pictures/prop.jpg">
+				</li>
+
+				<li>
+					Вычисляемые свойства <br>
+					<img src="./pictures/prop.jpg">
+				</li>
+				<li>Методы - prop: function() {} → prop() {}</li>
+				<li>str.repeat(times)</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Async/Await</h2>
+
+		<p>
+			Async/Await - синтакс JS для работы с асинхронными функциями. Он построен поверх Promises и совместим со всеми существующими API-интерфейсами на основе Promise. <br>
+			<ul>
+				<li>
+					async - объявляет асинхронную функцию (async function someName(){...})
+					<ul>
+						<li>Автоматически преобразует обычную функцию в Promise.</li>
+						<li>Функции async резолвят (resolve) всё, что возвращается в их теле.</li>
+						<li>Асинхронные функции позволяют использовать await.</li>
+					</ul>
+				</li>
+			</ul>
+		</p>
+
+	</section>
+
+
+	<section class="slide">
+		<p>
+			<ul>
+				<li>
+					await - приостанавливает выполнение функции (let result = await someAsyncCall();)
+					<ul>
+						<li>Работает только с Promise.</li>
+						<li>Может использоваться только внутри асинхронных функций.</li>
+					</ul>
+				</li>
+
+			</ul>
+			<img src="./pictures/as-aw.jpg">
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Задание</h2>
+
+		<p>
+			Переписать используя async/await вместо then/catch.<br>
+			<img src="./pictures/task.jpg">
+		</p>
+
+	</section>
+
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

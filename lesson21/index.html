@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #21</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>Объектная модель документа - DOM</li>
+			<li>Дерево и элементы DOM</li>
+			<li>Навигация по DOM</li>
+			<li>Поисковые методы</li>
+			<li>Атрибуты и свойства DOM</li>
+			<li>Добавление и удаление узлов</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Было задано</h2>
+		<ul>
+			<li> Освоить <a href="https://devionity.com/ru/courses/dive-into-ajax">AJAX</a> </li>
+			<li>Закончтить задания</li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>AJAX запросы</li>
+			<li>Fetch</li>
+			<li>Promise</li>
+			<li>Observable</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>AJAX запросы</h2>
+
+		<p>
+			AJAX (аббревиатура от «Asynchronous Javascript And Xml») – технология, которая позволяет клиенту общаться с сервером без перезагрузки страницы, асинхронно.<br>
+			В основе технологии лежит использование нестандартного объекта XMLHttpRequest для взаимодействия со скриптами на стороне сервера.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Методы и свойства httpRequest</h2>
+
+		<p>
+			<ul>
+				<li>httpRequest.onreadystatechange</li>
+				<li>httpRequest.open</li>
+				<li>httpRequest.send</li>
+				<li>httpRequest.setRequestHeader</li>
+				<li>httpRequest.readyState</li>
+				<li>httpRequest.status</li>
+				<li>httpRequest.responseText</li>
+			</ul>
+
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Методы запроса HTTP</h2>
+
+		<p>
+		  HTTP (HyperText Transfer Protocol) — протокол прикладного уровня передачи данных.
+		  <ul style="font-size: 18px;">
+		  	<li>OPTIONS</li>
+		  	<li>GET</li>
+		  	<li>HEAD</li>
+		  	<li>POST</li>
+		  	<li>PUT</li>
+		  	<li>PATCH</li>
+		  	<li>DELETE</li>
+		  	<li>TRACE</li>
+		  	<li>CONNECT</li>
+		  </ul>
+		</p>
+	 
+	</section>
+
+	<section class="slide">
+		<h2>Коды состояния</h2>
+
+		<p>
+			Код состояния является частью первой строки ответа сервера. Он представляет собой целое число из трёх цифр. 
+			<ul style="font-size: 20px;">
+				<li>1xx - Информационные</li>
+				<li>2хх - Успех</li>
+				<li>3хх - Перенаправление</li>
+				<li>4xx - Ошибка клиента</li>
+				<li>5xx - Ошибка сервера</li>
+			</ul>
+			
+			Зайти на произвольный сайт, открыть инструменты разработчика и ознакомиться с запросами (метод, тело запроса, ответ).
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Пример</h2>
+
+		<p>
+			<img src="./pictures/exam1.png"></img>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>fetch</h2>
+
+		<p style="font-size: 22px;">
+			Метод fetch – это XMLHttpRequest с улучшенным интерфейсом - построен на промисах. <br>
+			При вызове fetch возвращает промис, который, когда получен ответ, выполняет коллбэки с объектом Response или с ошибкой, если запрос не удался. <br>
+			let promise = fetch(url[, options]);
+			<ul style="font-size: 20px;">
+				<li>url – URL, на который сделать запрос</li>
+				<li>options – необязательный объект с настройками запроса</li>
+			</ul>
+			
+		</p>
+	
+	</section>
+
+	<section class="slide">
+		<h2>Свойства options</h2>
+
+		<p>
+			<ul style="font-size: 20px;">
+				<li>method – метод запроса.</li>
+				<li>headers – заголовки запроса (объект).</li>
+				<li>body – тело запроса: FormData, Blob, строка и т.п.</li>
+				<li>mode – одно из: «same-origin», «no-cors», «cors», указывает, в каком режиме кросс-доменности предполагается делать запрос.</li>
+				<li>credentials – одно из: «omit», «same-origin», «include», указывает, пересылать ли куки и заголовки авторизации вместе с запросом.</li>
+				<li>cache – одно из «default», «no-store», «reload», «no-cache», «force-cache», «only-if-cached», указывает, как кешировать запрос.</li>
+				<li>redirect – можно поставить «follow» для обычного поведения при коде 30x (следовать редиректу) или «error» для интерпретации редиректа как ошибки.</li>
+
+			</ul>
+
+		</p>
+	</section>
+
+	<section class="slide">
+		<p>
+			Объект response даёт возможность прочитать его тело:
+			<ul>
+				<li>response.arrayBuffer()</li>
+				<li>response.blob()</li>
+				<li>response.formData()</li>
+				<li>response.json()</li>
+				<li>response.text()</li>
+			</ul>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Пример</h2>
+
+		<p>
+			<img src="./pictures/exam2.png"></img>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Promise</h2>
+
+		<p style="font-size: 22px;">
+			Предоставляют удобный способ организации асинхронного кода.<br>
+			Promise – это объект, который имеет следующие состония: вначале pending («ожидание»), затем – одно из: fulfilled («выполнено успешно») или rejected («выполнено с ошибкой»).<br><br>
+			promise.then(onFulfilled, onRejected).<br>
+			promise.catch(onRejected) - поставить обработчик только на ошибку. <br>
+			new Promise(function(resolve, reject) {}). <br>
+			Цепочки промисов.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Параллельное выполнение, resolve, reject</h2>
+
+		<p>
+			<ul>
+				<li>Promise.all(iterable)</li>
+				<li>Promise.race(iterable)</li>
+			</ul>
+			Promise.resolve(value) -  создаёт успешно выполнившийся промис с результатом value. <br>
+			Promise.reject(value) - создаёт уже выполнившийся промис, но не с успешным результатом, а с ошибкой error.
+		</p>
+		
+	</section>
+
+	<section class="slide">
+		<h2>Пример</h2>
+
+		<p>
+			<img src="./pictures/exam3.png" width="520px"></img>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Observable</h2>
+
+		<p>
+			Методы класса HttpClient после выполнения запроса возвращают объект Observable< any >, который определен в библиотеке RxJS ("Reactive Extensions"). <br>
+			Естественно чтобы задействовать функционал RxJS в приложении, в проект должна быть добавлена соответствующая зависимость <a href="./task/rx.json">"rxjs"</a>.<br>
+			Позволяет провести постобработку полученных от сервера результатов.
+	</section>
+
+	<section class="slide">
+		<h2>Пример</h2>
+
+		<p>
+			<img src="./pictures/observable.jpg"></img>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Домашка</h2>
+		<ul>
+			<li> Освоить <a href="https://habr.com/post/169381/">Unit testing</a> </li>
+			<li>Используя https://1forge.com/forex-data-api/api-documentation создать график валют за 2 недели</li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+			<li> Освоить <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> </li>
+			<li>Освоить  <a href="https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch">Fetch</a> </li>
+			<li>Освоить  <a href="https://metanit.com/web/angular2/6.2.php">Observable</a> </li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+		</ul>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

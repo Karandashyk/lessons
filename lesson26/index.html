@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #26</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+
+		<ul style="font-size: 16px">
+			<li>Import/Export</li>
+			<li>Proxy</li>
+			<li>Функции</li>
+			<li>Set</li>
+			<li>Map</li>
+			<li>Templates</li>
+			<li>Динамический ключ</li>
+			<li>
+				Функциональное программирование:
+				<ul>
+					<li>Чистые функции</li>
+					<li>Функции высшего порядка</li>
+					<li>Карринг</li>
+					<li>Композиция</li>
+				</ul>
+			</li>
+		</ul>
+		
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<p>Практика</p>
+	</section>
+
+	<section class="slide">
+		<h2>Таймер</h2>
+
+		<p style="font-size: 20px">
+			Реализовать таймер обратного отсчёта. <br>
+			При нажатии на кнопку Add Timer появляется и стартует таймер отсчета от 10 секунд <br>
+			Количество таймеров, который можно добавить < 100 <br>
+			Вывод значения до сотой секунды <br>
+			Возле каждого таймера есть кнопка Delete, которая удаляет таймер(не смотря на то завершился он или нет) <br>
+			Если теймер не был удален и завершил отсчёт, вверху должен появиться текст с номером таймера, который завершился
+			<br>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Заказы</h2>
+
+		<p style="font-size: 20px">
+			На странице присутствует кнопка "Добавить заказ" <br>
+			Таблица с заказами(при запуске в таблице 3 записи который загружаются с json файла) <br>
+			В таблице колонки (id, name,  created date, description, кнопка edit,  кнопка delete) <br>
+			При нажатии на кнопку "Добавить", появляется форма для ввода имени и описания <br>
+			После ввода даных, форма исчезает и заказ появляется в таблице <br>
+			При нажатии на кнопку delete в строку, строка удаляется <br>
+			При нажатии на edit появляется форма с предустановлеными данными <br>
+			При нажатии сохранить, в таблице обновляется запись <br>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Геометрия *** </h2>
+
+		<p>
+			Пользователь вводит три точки, которий задают вершины треугольника (в числовом формате) <br>
+			За точку отсчёта (0, 0) желательно брать верхний левый угол условного полотна(во все графических библиотеках точка (0,0) это верхний левый угол) <br>
+			Пользователь вводит координаты точки <br>
+			При нажатии на кнпоку Check выводится результат, принадлежить ли точка треугольнику <br>
+		</p>
+
+	</section>
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

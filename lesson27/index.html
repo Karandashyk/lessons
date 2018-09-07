@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #27</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<li>Модули</li>
+		<li>Proxy</li>
+		<li>Функции</li>
+		<li>Set, Map, WeakSet и WeakMap</li>
+		<li>Другие возможности ES6</li>
+		<li>Async/Await</li>
+		<li>
+			Функциональное программирование:
+			<ul>
+				<li>Чистые функции</li>
+				<li>Функции высшего порядка</li>
+				<li>Карринг</li>
+			</ul>
+		</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>Input</li>
+			<li>Audio</li>
+			<li>Video</li>
+			<li>Regular Expressions</li>
+			<li>Cookie, Session/Local Storage</li>
+			<li>Websockets</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Input</h2>
+
+		<p>
+			В HTML5 добавилось несколько типов для тега INPUT: <br>
+			<ul style="font-size: 18px; ">
+				<li>number</li>
+				<li>range</li>
+				<li>date</li>
+				<li>month</li>
+				<li>week</li>
+				<li>time</li>
+			</ul>
+			<ul style="font-size: 18px; position: absolute; left: 50%; top: 45%">
+				<li>email</li>
+				<li>color</li>
+				<li>search</li>
+				<li>url</li>
+				<li>tel</li>
+			</ul>
+			Создать документ с 5 произвольными инпутами из HTML5 и протестировать их работу.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Audio</h2>
+
+		<p>
+			HTML5 < audio > элемент определяет стандарт встроенного аудио в веб-страницу.
+			<br>
+			<img src="./pictures/audio.jpg">
+			<br>
+			Типы:
+			<ul style="font-size: 18px;">
+				<li>MP3 - audio/mpeg</li>
+				<li>OGG - audio/ogg</li>
+				<li>WAV - audio/wav</li>
+			</ul>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Video</h2>
+
+		<p>
+		  	HTML5 < video > элемент определяет стандарт встроенного видео в веб-страницу.
+			<br>
+			<img src="./pictures/video.jpg">
+			<br>
+			Типы:
+			<ul style="font-size: 18px;">
+				<li>MP4 - video/mp4</li>
+				<li>WebM - video/webm</li>
+				<li>Ogg - video/ogg</li>
+			</ul>
+		</p>
+	 
+	</section>
+
+	<section class="slide">
+		<h2>HTML5 Audio и Video DOM</h2>
+
+		<p>
+			Методы:
+			<ul>
+				<li>addTextTrack()</li>
+				<li>canPlayType()</li>
+				<li>load()</li>
+				<li>play()</li>
+				<li>pause()</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<p>
+			Свойства:
+			<ul>
+				<li>autoplay</li>
+				<li>controls</li>
+				<li>duration</li>
+				<li>currentTime</li>
+				<li>muted</li>
+				<li>src</li>
+				<li>volume</li>
+			</ul>
+			Полный список <a href="https://www.w3schools.com/tags/ref_av_dom.asp">тут</a>.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<p>
+			События:
+			<ul>
+				<li>pause</li>
+				<li>play</li>
+				<li>volumechange</li>
+				<li>error</li>
+				<li>ended</li>
+			</ul>
+			Полный список <a href="https://www.w3schools.com/tags/ref_av_dom.asp">тут</a>.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Regular Expresions</h2>
+
+		<p>
+			Регулярные выражения - это шаблоны используемые для сопоставления последовательностей символов в строках. <br>
+			Создание регулярного выражения:
+			<ul style="font-size: 20px">
+				<li>let pattern1 = /\d\d\d/g;</li>
+				<li>let pattern2 = new RegExp("\\d\\d\\d", "g");</li>
+			</ul>
+		</p>
+	
+	</section>
+
+	<section class="slide">
+		<p>
+			Метасимволы:
+			<ul style="font-size: 20px">
+				<li>\w - любой алфавитно-цифровой символ в верхнем и нижнем регистре и символ подчеркивания</li>
+				<li>\W - любой символ не являющийся подчеркиванием и не относящийся к алфавитно-цифровым</li>
+				<li>\s - любой пробельный символ</li>
+				<li>\S - любой не пробельный символ</li>
+				<li>\d - любая цифра (digit)</li>
+				<li>\D - любой не цифровой символ</li>
+			</ul>
+		</p>
+	
+	</section>
+
+	<section class="slide">
+		<p>
+			<ul style="font-size: 20px">
+				<li>\v - (вертикальная табуляция)</li>
+				<li>\t - (табуляция)</li>
+				<li>\r - (перевод каретки)</li>
+				<li>\n - (перевод строки)</li>
+				<li>\f - (перевод страницы)</li>
+			</ul>
+		</p>
+	
+	</section>
+
+	<section class="slide">
+		<p>
+			Наборы символов:
+			<ul style="font-size: 20px">
+				<li>/[RrGgBb]/ - cоответствие указанным символам</li>
+				<li>/[d-z]/ - cоответствие символам английского алфавита в нижнем регистре</li>
+				<li>/[0-9]+/ - cоответствие указанным цифрам</li>
+				<li>[^3-9] - cоответствие с чем угодно кроме цифр заданного диапазона</li>
+			</ul>
+		</p>
+	
+	</section>
+
+	<section class="slide">
+		<p>
+			Квантификатор (Кванторы):
+			<ul style="font-size: 20px">
+				<li>+ oдин или несколько символов</li>
+				<li>* ноль и более символов</li>
+				<li>? ноль или одно вхождение</li>
+			</ul>
+			Якорные символы:
+			<ul style="font-size: 20px">
+				<li>^  начало строки</li>
+				<li>$  конец строки</li>
+				<li>\b соответствует границе слова</li>
+			</ul>
+		</p>
+	
+	</section>
+
+	<section class="slide">
+		<p>
+			Интервалы:
+			<ul style="font-size: 20px">
+				<li>{3}  - точное количество совпадений </li>
+				<li>{2,3}  - диапазон</li>
+				<li>{3,}  - не менее</li>
+				<li>{,3} - не более</li>
+			</ul>
+			Флаги:
+			<ul style="font-size: 20px">
+				<li>i  - выполнение поиска не чувствительного к регистру</li>
+				<li>g - выполнение глобального поиска</li>
+				<li>m - многострочный режим</li>
+				<li>y - выполняет поиск начиная с символа, который находится на позиции свойства lastindex текущего регулярного выражения.</li>
+			</ul>
+		</p>
+	
+	</section>
+
+	<section class="slide">
+		<p>
+			Методы RegExp:
+			<ul style="font-size: 20px">
+				<li>exec - выполняет поиск совпадения в строке, возвращает массив</li>
+				<li>test - тестирует совпадение в строке, возвращет true/false</li>
+			</ul>
+			Методы String:
+			<ul style="font-size: 20px">
+				<li>match - выполняет поиск совпадения в строке, возвращет массив данных либо null</li>
+				<li>search - тестирует на совпадение в строке, возвращет индекс совпадения, или -1</li>
+				<li>replace -  выполняет поиск совпадения в строке, и заменяет совпавшую подстроку другой подстрокой переданной как аргумент в этот метод</li>
+				<li>split - использует регулярное выражение или фиксированую строку чтобы разбить строку на массив подстрок</li>
+			</ul>
+		</p>
+	
+	</section>
+
+	<section class="slide">
+		<h2>Пример</h2>
+
+		<p>
+			<img src="./pictures/reg.jpg">
+			<br>
+			Создать регулярное выражение, которое будет тестировать url на совпадение с route: /documents/books или /documents/pictures.
+		</p>
+	
+	</section>
+
+	<section class="slide">
+		<h2>Cookie</h2>
+
+		<p>
+			Cookies позволяют сохранять пользовательскую информацию для веб-страниц.<br>
+			<img src="./pictures/cookie.jpg">
+
+		</p>
+
+	</section>
+
+	<section class="slide">
+
+		<p>
+			Атрибуты cookie:
+			<ul style="font-size: 20px;">
+				<li>name</li>
+				<li>value</li>
+				<li>expires</li>
+				<li>max-age</li>
+				<li>path</li>
+				<li>domain</li>
+				<li>secure</li>
+			</ul>
+			Создать 2 cookie с произвольной информацией.
+			Первый удалить, а во втором поменять информацию.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Local/Session Storage</h2>
+
+		<p>
+			Интерфейс Storage из Web Storage API предоставляет доступ для session storage или local storage для конкретного домена, позволяя вам к примеру добавлять, изменять или удалять сохранённые элементы данных.<br>
+			Разница только в том, что свойство sessionStorage хранит данные в течение сеанса (до закрытия браузера), в отличие от данных,  находящихся в свойстве localStorage, которые не имеют ограничений по времени хранения и могут быть удалены только с помощью JavaScript. 
+
+		</p>
+
+	</section>
+
+	<section class="slide">
+
+		<p>
+			<img src="./pictures/storage.jpg">
+			<br>
+			Сохранить в localStorage любимый цвет.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Websockets</h2>
+
+		<p>
+			Вебсокеты это продвинутая технология, позволяющая открыть постоянное двунаправленное сетевое соединение между браузером пользователя и сервером.<br>
+			Для открытия соединения достаточно создать объект WebSocket, указав в нём специальный протокол ws (wss).<br>
+			let socket = new WebSocket("ws://google.com");
+			
+		</p>
+
+	</section>
+
+	<section class="slide">
+
+		<p>
+			Events:
+			<ul style="font-size: 20px;">
+				<li>onopen</li>
+				<li>onclose</li>
+				<li>onmessage</li>
+				<li>onerror</li>
+			</ul>
+			Method: 
+			<ul style="font-size: 20px;">
+				<li>send</li>
+				<li>close</li>
+			</ul>
+			Пример для <a href="https://docs.coinapi.io/#introduction">API</a> смотреть <a href="./test.html">тут</a>.
+		</p>
+	</section>
+
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

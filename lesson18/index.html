@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #18</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>__proto__</li>
+			<li>prototype</li>
+			<li>Цепочка прототипов</li>
+			<li>Методы  в prototype</li>
+			<li>Наследование в JS</li>
+			<li>jsDOC</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Было задано</h2>
+		<ul>
+			<li>Доделать задание</li>
+			<li>Освоить <a href="https://devionity.com/ru/courses/js-fundamentals-and-jquery">DOM часть</a></li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>Объектная модель документа - DOM</li>
+			<li>Дерево и элементы DOM</li>
+			<li>Навигация по DOM</li>
+			<li>Поисковые методы</li>
+			<li>Атрибуты и свойства DOM</li>
+			<li>Добавление и удаление узлов</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Document Object Model</h2>
+
+		<p>
+			<img style="width: 300px; margin-left: 30%;" src="./pictures/DOM.jpg"> <br>
+			Основной инструмент работы и динамических изменений на странице.
+			Глобальный объект document даёт возможность взаимодействовать с содержимым страницы – читать информацию из HTML, создавать и изменять элементы.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Дерево DOM</h2>
+
+		<p>
+			Согласно DOM-модели, документ является иерархией - деревом. <br>
+		<ul style="font-size: 22px;">
+			<li>Каждый HTML-тег образует узел дерева. </li>
+			<li>Вложенные теги становятся дочерними узлами. </li>
+			<li>Все элементы страницы, включая теги, текст, комментарии, являются узлами DOM. </li>
+			<li>У элементов DOM есть свойства и методы, которые позволяют изменять их. </li>
+		</ul>
+
+		Создать документ с 3 элементами div, а у каждого элемента еще по 2 дочерних элемента (должны присутствовать p, ul, li, комментарии и текст).
+		Ознакомиться с DOM в браузере открыв инструменты разработчика.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Навигация по DOM</h2>
+
+		<p>
+			Доступ к DOM начинается с объекта document. Из него можно добраться до любых узлов или элементов. <br>
+
+			<img style="width: 350px;" src="./pictures/navNodes.jpg">
+			<img style="width: 350px; margin-left: 10%;" src="./pictures/navEls.jpg">
+
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Таблицы</h2>
+
+		<ul style="font-size: 18px;">
+			<li>table.rows – коллекция строк TR таблицы.</li>
+			<li>table.caption/tHead/tFoot – ссылки на элементы таблицы CAPTION, THEAD, TFOOT.</li>
+			<li>table.tBodies – коллекция элементов таблицы TBODY, по спецификации их может быть несколько.</li> <br>
+			<li>tbody.rows – коллекция строк TR секции. (одинаково для THEAD/TFOOT/TBODY) </li> <br>
+			<li>tr.cells – коллекция ячеек TD/TH</li>
+			<li>tr.sectionRowIndex – номер строки в текущей секции THEAD/TBODY</li>
+			<li>tr.rowIndex – номер строки в таблице</li>
+			<li>td.cellIndex – номер ячейки в строке</li>
+
+		</ul>
+	</section>
+
+	<section class="slide">
+
+		<p>
+			Важно!
+		<ul>
+			<li>Список детей – только для чтения!</li>
+			<li>DOM-коллекции, такие как childNodes и другие, которые мы увидим далее, не являются JavaScript-массивами.</li>
+			<li>В мире DOM в качестве значения, обозначающего «нет такого элемента» или «узел не найден», используется не undefined, а null.</li>
+		</ul>
+		</p>
+
+		Для документа созданного ранее написать код, который: получит элемент HEAD, получит UL, получит все дочерние элементы P, получит соседние узлы комментариев.
+	</section>
+
+	<section class="slide">
+		<h2>Поисковые методы</h2>
+
+		<p>
+			getElement* и querySelector*
+		<ul style="font-size: 18px;">
+			<li>document.getElementById или просто id</li>
+			<li>document.getElementsByName</li>
+			<li>document.getElementsByTagName (можно получить всех потомков, передав звездочку '*' вместо тега)</li>
+			<li>document.getElementsByClassName</li>
+			<li>elem.querySelectorAll</li>
+			<li>elem.querySelector</li> <br>
+
+			<li>matches:  elem.matches(css) ничего не ищет, а проверяет, удовлетворяет ли elem селектору css. Он возвращает true либо false.</li>
+			<li>closest: elem.closest(css) ищет ближайший элемент выше по иерархии DOM, подходящий под селектор.</li>
+		</ul>
+
+		</p>
+	</section>
+
+	<section class="slide">
+
+		<p>
+			Важно!
+		<ul>
+			<li>Не забываем про букву "s"!</li>
+			<li>Возвращается коллекция, а не элемент</li>
+			<li>Псевдо-класс тоже работает: document.querySelectorAll(':hover')</li>
+			<li>Для проверки, является ли один узел предком другого, достаточно метода nodeA.contains(nodeB).</li>
+		</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+
+		<p>
+			В документе <a href="./task/table.html">table.html</a> найти (получить в переменную):
+		<ul>
+			<li>Все элементы label внутри таблицы. Должно быть 3 элемента.</li>
+			<li>Первую ячейку таблицы (со словом "Возраст").</li>
+			<li>Вторую форму в документе.</li>
+			<li>Форму с именем search, без использования её позиции в документе.</li>
+			<li>Элемент input в форме с именем search. Если их несколько, то нужен первый.</li>
+			<li>Элемент с именем info[0], без точного знания его позиции в документе.</li>
+			<li>Элемент с именем info[0], внутри формы с именем search-person.</li>
+		</ul>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Атрибуты и свойства DOM</h2>
+
+		<p style="font-size: 18px;">
+
+			Свойство – это то, что находится внутри DOM-объекта, как и любой объект в JavaScript, он может содержать пользовательские свойства и методы. <br>
+			Атрибуты – это то, что написано в HTML. Доступ к атрибутам осуществляется при помощи стандартных методов:
+		<ul style="font-size: 16px;">
+			<li>elem.hasAttribute(name) – проверяет наличие атрибута</li>
+			<li>elem.getAttribute(name) – получает значение атрибута</li>
+			<li>elem.setAttribute(name, value)</li>
+			<li>elem.removeAttribute(name)</li>
+			<li>Все атрибуты элемента можно получить с помощью свойства elem.attributes</li>
+		</ul>
+		<img style="width: 600px;" src="./pictures/diffs.jpg">
+
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Cвойства innerHtml и outerHtml, и другие</h2>
+
+		<p >
+			InnerHtml позволяет получить HTML-содержимое элемента в виде строки. В innerHTML можно и читать и писать. <br>
+			Свойство outerHTML содержит HTML элемента целиком. Изменить outerHTML элемента невозможно. <br>
+		<ul style="font-size: 20px;">
+			<li>Значение, возвращаемое innerHTML – всегда валидный HTML-код. </li>
+			<li>Добавление innerHTML+= осуществляет перезапись.</li>
+			<li>Если в innerHTML есть тег script – он не будет выполнен.</li>
+			<li>OuterHTML доступно на запись, но при этом элемент не меняется, а заменяется на новый.</li>
+		</ul>
+
+		</p>
+	</section>
+
+	<section class="slide">
+
+		<p>
+			Свойство textContent содержит только текст внутри элемента, за вычетом всех <тегов>.<br>
+			Скрыть элемент можно с помощью установки свойства hidden в true или с помощью атрибута.<br>
+			Узлы DOM также имеют другие свойства, в зависимости от тега. Например, у INPUT есть свойства value и checked, а у A есть href и т.д.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Свойство classlist</h2>
+
+		<p>
+			Свойство classList – это объект для работы с классами. <br>
+			Методы:
+		<ul>
+			<li>elem.classList.contains("class") – возвращает true/false, в зависимости от того, есть ли у элемента класс class.</li>
+			<li>elem.classList.add/remove("class") – добавляет/удаляет класс class</li>
+			<li>elem.classList.toggle("class") – если класса class нет, добавляет его, если есть – удаляет.</li>
+		</ul>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Нестандартные атрибуты</h2>
+
+		<p>
+			У каждого элемента есть некоторый набор стандартных свойств, например для < a > это будут href, name, а для < img > это будут src, alt, и так далее. <br>
+
+			Точный набор свойств описан в стандарте, обычно мы более-менее представляем, если пользуемся HTML, какие свойства могут быть, а какие – нет. <br>
+
+			Нестандартные атрибуты иногда используют для CSS.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Свойство dataset</h2>
+
+		<p style="font-size: 20px;">
+			С помощью нестандартных атрибутов можно привязать к элементу данные, которые будут доступны в JavaScript. <br>
+			Как правило, это делается при помощи атрибутов с названиями, начинающимися на data-, например:	<br>
+			< div id="elem" data-about="Poem" data-author="Unknown">
+			Когда я сплю, я вижу зеленую воду.
+			< /div> <br>
+
+			При этом во всех браузерах, кроме IE10-, к таким атрибутам можно обратиться не только как к атрибутам, но и как к свойствам, при помощи специального свойства dataset (elem.dataset.about, elem.dataset.userLocation).
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Свойство style</h2>
+
+		<p>
+			Свойство element.style возвращает объект, который дает доступ к стилю элемента на чтение и запись. <br>
+		<ul>
+			<li>Единицы измерения обязательны в style.</li>
+			<li>Для свойств, названия которых состоят из нескольких слов, используется camalCase (elem.style.backgroundColor).</li>
+			<li>Полный стиль из getComputedStyle, так как свойство style дает доступ только к той информации, которая хранится в elem.style.</li>
+			<li>Свойство style мы используем лишь там, где не работают классы.</li>
+		</ul>
+		</p>
+	</section>
+
+	<section class="slide">
+		Напиcать функцию showNotification(options), которая показывает уведомление, пропадающее через 2 сек. <br>
+
+		<p style="font-size: 18px;">
+
+			/**<br>
+			* Показывает уведомление, пропадающее через 2 сек<br>
+			*<br>
+			* @param options.top {number} вертикальный отступ, в px<br>
+			* @param options.right {number} правый отступ, в px<br>
+			* @param options.сolor {string} строка цвета<br>
+			* @param options.className {string} CSS-класс<br>
+			* @param options.html {string} HTML-текст для показа<br>
+			*/<br>
+			function showNotification(options) {<br>
+			// ваш код<br>
+			}<br>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Добавление и удаление узлов</h2>
+
+		<p>
+		<ul style="font-size: 18px;">
+			<li>document.createElement(tag)</li>
+			<li>document.createTextNode(text)</li>
+			<li>parentElem.appendChild(elem)</li>
+			<li>parentElem.insertBefore(elem, nextSibling)</li>
+			<li>parentElem.removeChild(elem) или elem.remove()</li>
+			<li>parentElem.replaceChild(newElem, elem)</li>
+			<li>elem.cloneNode(deep) – клонирует элемент, если deep == true, то со всеми потомками, если false – без потомков.</li>
+		</ul>
+		! Все методы вставки возвращают вставленный узел.<br>
+		! Все методы вставки автоматически удаляют вставляемый элемент со старого места.
+
+
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Домашка</h2>
+		<ul>
+			<li> Освоить<a href="https://devionity.com/ru/courses/js-fundamentals-and-jquery">DOM, events</a> </li>
+			<li><a href="https://docs.google.com/document/d/1UYQKGlYDOnyP3g8jSoG-8hAq0-WV2m20D7K0csVgLZU/edit?usp=sharing">Задача</a></li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+		</ul>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

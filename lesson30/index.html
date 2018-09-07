@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #30</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+
+		<ul style="font-size: 18px">
+			<li>Подключение</li>
+			<li>$(selector)</li>
+			<li>$(document).ready</li>
+			<li>jQuery Events</li>
+			<li>Hide/Show</li>
+			<li>Fading</li>
+			<li>Sliding</li>
+			<li>Animate</li>
+			<li>Chaining</li>
+			<li>Applying</li>
+		</ul>
+		
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<p>Практика</p>
+	</section>
+
+	<section class="slide">
+		<h2>ToDO list</h2>
+
+		<ul>
+			<li>Пользователь видит список задач</li>
+			<li>Пользователь может создавать новую задачу</li>
+			<li>Пользователь может отмечать задачу как выполненную</li>
+			<li>Задачи нужно хранить в indexDb через воркеры в отдельном потоке</li>
+			<li>Восстанавливать при перезагрузке страницы</li>
+		</ul>
+		
+		<p><a href="https://habr.com/post/213515/">Читать</a></p>
+		<p><a href="https://developer.mozilla.org/ru/docs/IndexedDB/Using_IndexedDB">Читать</a></p>
+		<p></p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Чат используя Pusher</h2>
+		
+		<p></p>
+
+		<ul style="font-size: 20px">
+			<li>Авторизация, ввод простого имени, хранение имени где-то в localStorage</li>
+			<li>Textarea, кнопка отправить.</li>
+			<li>При новом сообщении скроллить вверх</li>
+			<li>Хранить сообщения не нужно</li>
+			<li>Отправлять сообщения через клиенсткие ивенты <a href="https://pusher.com/docs/client_api_guide/client_events#trigger-events">Events</a></li>
+			<li>Весь обмен сообщений через сокеты</li>
+			<li>Логировать все ошибки</li>
+		</ul>
+
+		<p><a href="https://pusher.com/docs/javascript_quick_start">Start</a></p>
+		<p><a href="https://github.com/pusher/pusher-js">Github</a></p>
+
+	</section>
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

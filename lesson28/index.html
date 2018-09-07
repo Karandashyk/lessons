@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие 28#</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>Input</li>
+			<li>Audio</li>
+			<li>Video</li>
+			<li>Regular Expressions</li>
+			<li>Cookie, Session/Local Storage</li>
+			<li>Websockets</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>Web Workers</li>
+			<li>Работа с файлами</li>
+			<li>History API</li>
+			<li>Geolocation</li>
+			<li>Touch events</li>
+			<li>Camera API</li>
+			<li>Drag and drop</li>
+			<li>Canvas, WebGL, SVG</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Web Workers</h2>
+
+		<p style="font-size: 22px">
+			Web Workers предоставляют простое средство для запуска скриптов в фоновом потоке.<br>
+			new Worker("file.js") / new SharedWorker("file.js") - доступен нескольким скриптам.<br>
+			Методы:
+			<ul style="font-size: 20px">
+				<li>postMessage(data)</li>
+				<li>onmessage(f)</li>
+				<li>terminate()</li>
+				<li>close()</li>
+				<li>importScripts()</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<p>
+			<a href="./webWorker.html">Пример</a>.
+			<br>
+			Создать Worker, который проверяет введенный текст на наличие чисел и считает их количество.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Работа с файлами</h2>
+
+		<p>
+			В HTML5 добавился атрибут multiple для < input type="file" >, а также FileReader - позволяет веб-приложениям асинхронно считывать файлы с компьютера пользователя. <br>
+			Важным инструментом также является export файлов без использования сервера. <br>
+			Универсальной библиотекой для экспорта html в pdf является jsPDF. 
+			<a href="./export.html">Пример</a>.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>History API</h2>
+
+		<p>
+			DOM window объект предоставляет доступ к истории браузера через объект history.<br>
+			Методы: 
+			<ul style="font-size: 20px">
+				<li>back()</li>
+				<li>forward()</li>
+				<li>go(n), где n - относительный показатель к текущей странице</li>
+				<li>pushState(stateObj, "title", "url")</li>
+				<li>replaceState(stateObj, "title", "url")</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+
+		<p>
+			Свойства:
+			<ul style="font-size: 20px">
+				<li>history.length</li>
+				<li>history.state</li>
+			</ul>
+			Событие:
+			<ul style="font-size: 20px">
+				<li>popstate</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Geolocation</h2>
+
+		<p>
+			Геолокация позволяет использовать место положения пользователя в веб-приложениях.<br>
+			API геолокации доступено через navigator.geolocation. <br>
+			Методы:
+			<ul style="font-size: 20px;">
+				<li>getCurrentPosition(success, error)</li>
+				<li>watchPosition( function(position){}, error, options) -> watchID, где position содержит свойства coords.latitude и coords.longitude</li>
+				<li>clearWatch(watchID)</li>
+			</ul>
+			Вывести координаты своего местоположения на странице.
+			
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Touch events</h2>
+
+		<p>
+			Touch-события предлагают возможность интерпретации воздействия пальца (или стилуса) на тач-экраны или трекболы.<br>
+			Интерфейсы:
+			<ul style="font-size: 20px;">
+				<li>TouchEvent - событие которое происходит когда изменяется состояние касания на поверхности.</li>
+				<li>Touch - одна точка контакта между пользователем и поверхностью касания.</li>
+				<li>TouchList - группа касаний; это используется когда пользователь, например, касается поверхности несколькими пальцами одновременно.</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<p>
+			События для TouchEvent:
+			<ul style="font-size: 20px;">
+				<li>touchstart</li>
+				<li>touchend</li>
+				<li>touchmove</li>
+				<li>touchcancel</li>
+			</ul>
+			Свойства:
+			<ul style="font-size: 20px;">
+				<li>changedTouches -> TouchList </li>
+				<li>targetTouches -> TouchList </li>
+				<li>touches -> TouchList </li>
+				<li>altKey, ctrlKey, shiftKey, metaKey</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Camera API</h2>
+
+		<p>
+			Позволяет делать снимки с помощью камеры устройства и загружать их в веб.<br>
+			Интерфейсы:
+			<ul>
+				<li>CameraManager</li>
+				<li>CameraControl</li>
+				<li>CameraCapabilities</li>
+			</ul>
+			<a href="./camera.html">Пример</a>.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Drag and drop</h2>
+
+		<p>
+			Позволяет пользователю нажать и удерживая зажатой кнопку мыши над элементом, переместить его на другую позицию, отпустив кнопку мыши пользователь может оставить элемент на новой позиции.<br>
+			Этапы:
+			<ul style="font-size: 20px;">
+				<li>Определить переносимый элемент.</li>
+				<li>Определить данные, которые могут быть перемещены.</li>
+				<li>Определить возможные эффекты переноса.</li>
+				<li>Определить область назначения.</li>
+				<li>Определить действие на drop.</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+
+		<p>
+			События: 
+			<ul style="font-size: 20px">
+				<li>dragstart</li>
+				<li>dragenter</li>
+				<li>dragover</li>
+				<li>dragleave</li>
+				<li>drag</li>
+				<li>drop</li>
+				<li>dragend</li>
+			</ul>
+			<a href="./drag.html">Пример</a>.
+		</p>
+
+	</section>
+
+
+	<section class="slide">
+
+		<p style="font-size: 22px">
+			event.dataTransfer.effectAllowed = "copy";<br>
+			event.dataTransfer.dropEffect = "copy";<br>
+			Эффекты: 
+			<ul style="font-size: 20px">
+				<li>none</li>
+				<li>copy</li>
+				<li>move</li>
+				<li>link</li>
+				<li>copyMove</li>
+				<li>copyLink</li>
+				<li>linkMove</li>
+				<li>all (copy, move, link)</li>
+			</ul>
+			Сделать поле для коллажа с предложенными произвольными картинками. Реализовать Drad and Drop для картинок.
+		</p>
+
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

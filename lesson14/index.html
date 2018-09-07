@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 90%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #14</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>Области видимости</li>
+			<li>Замыкания</li>
+			<li>setTimeout</li>
+			<li>setInterval</li>
+			<li>Контекст</li>
+			<li>Дескприпторы</li>
+			<li>Конструкторы</li>
+			<li>Статические свойства методы</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>Практика</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<p>Вывести количество свойств в объекте</p>
+		<img class="screenshot" src="pictures/task1.png">
+
+	</section>
+
+	<section class="slide">
+		<p>Реализовать функцию getField, которая берет массив объектов и выводит массив запрашиваемых значений</p>
+		<img class="screenshot" src="pictures/task2.png">
+	</section>
+
+	<section class="slide">
+		<p style="font-size: 14px">
+			Реализовать функцию создания счетчика createCounter(start, step). Она при вызове возвращает другую функцию-генератор, которая при каждом вызове дает число на 1 больше, и так до бесконечности. Начальное число, с которого начинать отсчет, и шаг, задается при создании генератора.  Начальное значение по умолчанию равно 0.
+		</p>
+		<img width="500" src="pictures/task3.png">
+	</section>
+
+	<section class="slide">
+		<p>Также дописать функцию pick(counter, x) которая вызвает функцию gen заданное число (x) раз и возвращает массив с результатами вызовов.</p>
+		<img class="screenshot" src="pictures/task4.png">
+	</section>
+
+	<section class="slide">
+		<p>Реализовать функцию map(fn, array), которая принимает на вход функцию и массив, и обрабатывает каждый элемент массива этой функцией, возвращая новый массив.</p>
+		<img class="screenshot" src="pictures/task5.png">
+	</section>
+
+	<section class="slide">
+		<p>
+			Реализовать функцию filter, которая принимает функцию-предикат и массив. Возвращает она массив значений, для которых предикат вернет true. Функция не должна изменять исходный массив.
+		</p>
+		<img class="screenshot" src="pictures/task6.png">
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

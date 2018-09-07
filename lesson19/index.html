@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #19</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>Объектная модель документа - DOM</li>
+			<li>Дерево и элементы DOM</li>
+			<li>Навигация по DOM</li>
+			<li>Поисковые методы</li>
+			<li>Атрибуты и свойства DOM</li>
+			<li>Добавление и удаление узлов</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Было задано</h2>
+		<ul>
+			<li> Освоить<a href="https://devionity.com/ru/courses/js-fundamentals-and-jquery">DOM, events</a> </li>
+			<li><a href="https://docs.google.com/document/d/1UYQKGlYDOnyP3g8jSoG-8hAq0-WV2m20D7K0csVgLZU/edit?usp=sharing">Задача</a></li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>Практика</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<p>
+			Дан элемент #test. Добавьте ему класс lala. <br>
+			Дан элемент #test. Удалите у него класс lala. <br>
+			Дан элемент #test. Проверьте наличие у него класса lala. <br>
+			Дан элемент #test. Добавьте ему класс lala, если его нет и удалите - если есть. <br>
+			Дан элемент #test. Узнайте количество его классов. <br>
+			Дан элемент #test. Выведите последовательно алертом его классы. <br>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<p>
+			Дан элемент #test. Сделайте его красного цвета, размером 30px, добавьте ему границу. Решите задачу с помощью свойства style
+			<br>
+
+			Даны элементы с классом lala. Добавьте каждому элементу в конец название его тега в нижнем регистре. <br>
+		</p>
+	</section>
+
+	<section class="slide">
+
+		<p>
+			Дан ol. Вставьте ему в конец li с текстом 'Точка'. <br>
+			Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li.
+			<br>
+			Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li. Сделайте так, чтобы к вставляемым li было привязано следующее событие: по нажатию на li она должна вывести на экран свой текст.
+			<br>
+			Дан элемент ul, а в нем li #test. Вставьте перед элементом #test новую li с текстом 'сделано'. <br>
+
+
+		</p>
+	</section>
+
+	<section class="slide">
+		<p>
+			Дан элемент #test. Вставьте перед ним span с текстом 'сделано'. <br>
+			Дан элемент #test. Вставьте после него span с текстом 'сделано'. <br>
+			Дан элемент #test. Вставьте ему в начало span с текстом 'сделано'. <br>
+			Дан элемент #test. Вставьте ему в конец span с текстом 'сделано'. <br>
+			Дан элемент #test. Найдите первого потомка этого элемента и сделайте его текст красного цвета. <br>
+		</p>
+	</section>
+
+	<section class="slide">
+
+		<p>
+			Дан элемент #test. Найдите последнего потомка этого элемента и сделайте его текст красного цвета. <br>
+			Дан элемент #test. Найдите всех потомков этого элемента и добавьте им в конец текст '?' <br>
+			Дан элемент #test. Найдите его соседа сверху и добавьте ему в конец текст '?'. <br>
+			Дан элемент #test. Найдите его соседа снизу и добавьте ему в конец текст '?'. <br>
+			Дан элемент #test. Найдите его соседа снизу его соседа снизу (следующий элемент за соседним) и добавьте ему в конец текст '?'.
+		</p>
+
+	</section>
+
+	<section class="slide">
+
+		<p><a href="https://docs.google.com/document/d/1gJIfv1zhvSzXbElBgIIiaU5vl96864xnksTIRu-kMIY/edit?usp=sharing">Задание</a></p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Домашка</h2>
+		<ul>
+			<li> Освоить <a href="https://devionity.com/ru/courses/dive-into-ajax">AJAX</a> </li>
+			<li>Закончтить задания</li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+		</ul>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

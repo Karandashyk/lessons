@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dog</title>
+	</head>
+	<body>
+		<div id="block"></div>
+		<script type="text/javascript">
+			// var xhttp = new XMLHttpRequest();
+			// var url, image;
+			// xhttp.onreadystatechange = function() {
+			//     if (xhttp.readyState == 4 && xhttp.status == 200) {
+			//        url = JSON.parse(xhttp.responseText).message;
+			//        image = document.createElement("img");
+			//        image.src = url;
+			//        document.getElementById("block").appendChild(image);
+			//     }
+			// };
+			// xhttp.open("GET", "https://dog.ceo/api/breeds/image/random", true);
+			// xhttp.send();
+
+			// fetch("https://dog.ceo/api/breeds/image/random")
+			//   .then(function(response) {
+			//     return response.json();
+			//    })
+			//   .then(function(data) {
+			//     url = data.message;
+			//        image = document.createElement("img");
+			//        image.src = url;
+			//        document.getElementById("block").appendChild(image);
+			//   })
+			//   .catch( alert );
+
+			var promise = new Promise(function(resolve, reject) {
+				var xhttp = new XMLHttpRequest();
+				var url, image;
+				xhttp.onreadystatechange = function() {
+				    if (xhttp.readyState == 4 && xhttp.status == 200) {
+				    	resolve(xhttp.responseText);
+				    }
+				};
+				xhttp.open("GET", "https://dog.ceo/api/breeds/image/random", true);
+				xhttp.send();
+			});
+			promise
+			  .then(
+			    result => {
+			    	url = JSON.parse(result).message;
+			        image = document.createElement("img");
+			        image.src = url;
+			        document.getElementById("block").appendChild(image);
+			    },
+			    error => {
+			      alert("Rejected: " + error); 
+			    }
+			  );
+		</script>
+	</body>
+</html>
+

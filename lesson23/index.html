@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #23</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>TDD</li>
+			<li>BDD</li>
+			<li>e2e</li>
+			<li>Рефакторинг</li>
+			<li>Архитектура приложения</li>
+			<li>qUnit</li>
+		</ul>
+		
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>Практика</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Задача</h2>
+
+		<p>
+			Работа с https://newsapi.org/
+		</p>
+		
+		<ul style="font-size: 16px">
+			Реализовать
+			<li>1. При входе на страницу пользователь должен выдеть список из 10 новостей с краткой информацией</li>
+			<li>2. При клике на новость список должен пропасть, при этом подробная ифнормация по событию должна отобразиться</li>
+			<li>3. При обновлении страницы подробная информация по новости должна остаться</li>
+			<li>4. При клике на кнопку назад подробная информация пропадает и снова видно список новостей</li>
+			<li>5. Покрыть тестами</li>
+		</ul>
+
+		<p style="font-size: 18px">
+			Для выполнения пункта 3, обычно используються query параметры в url. Но в чистом виде изменения query параметров приводят к перезагрузке страницы.
+			<br>
+			По этому желательно использовать хеш <br>
+			<a href="https://javascript.ru/window-location">Документация</a>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Задача*</h2>
+
+		<p>
+			Реализация аглоритма Виженера
+		</p>
+		<ul>
+			<li>Пользователь может ввести строку для шифрования и ключ</li>
+			<li>При нажатии на ОК показать исходный, зашифрованый и розшифрованый текст</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Задача**</h2>
+
+		<p>
+			Реализация метода Гауса для решения систем линейных уровнений
+		</p>
+		<ul style="font-size: 20px">
+			<li>Разобрать алгоритм(решение на листочке)</li>
+			<li>Реализовать алгоритм</li>
+			<li>Создать страницу в которой пользователь может указать размер матрицы(от 2 до 10)</li>
+			<li>Отобразить необходимое количество инпутов для ввода значений</li>
+			<li>Релизовать валидацию на ввод чисел</li>
+			<li>Релизовать валидацию на ввод матрицы с линейно зависимыми столбцами или строками</li>
+			<li>После нажать на кнопку ОК отобразить ответ с промежуточными резльтатами</li>
+		</ul>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

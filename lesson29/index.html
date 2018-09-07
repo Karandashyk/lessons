@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #29</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>Web Workers</li>
+			<li>Работа с файлами</li>
+			<li>History API</li>
+			<li>Geolocation</li>
+			<li>Touch events</li>
+			<li>Camera API</li>
+			<li>Drag and drop</li>
+			<li>Canvas, WebGL, SVG</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>jQuery</h2>
+
+		<ul style="font-size: 18px">
+			<li>Подключение</li>
+			<li>$(selector)</li>
+			<li>$(document).ready</li>
+			<li>jQuery Events</li>
+			<li>Hide/Show</li>
+			<li>Fading</li>
+			<li>Sliding</li>
+			<li>Animate</li>
+			<li>Chaining</li>
+			<li>Applying</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Подключение</h2>
+
+		<ul>
+			<li>npm install jquery</li>
+			<li>https://code.jquery.com/jquery-3.3.1.min.jsy</li>
+		</ul>
+
+		<p>Подключить jQuery в конце body</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>$(selector)</h2>
+
+		<ul>
+			<li>$(tag)</li>
+			<li>$(class)</li>
+			<li>$(id)</li>
+			<li>$(advanced)</li>
+		</ul>
+
+		<p>Получить элемент по трем типам селекторов, так же найты 2 элемента по сложным селекторам</p>
+	</section>
+
+	<section class="slide">
+		<h2>$(document).ready</h2>
+
+		<p>Ивент загрузки страницы</p>
+
+		<p>Переместить подключение в header, обернуть код в $(document).ready</p>
+	</section>
+
+	<section class="slide">
+		<h2>jQuery Events</h2>
+		<ul>
+			<li>.click()</li>
+			<li>.dbclick()</li>
+			<li>...</li>
+			<li>.on('click', function(){})</li>
+		</ul>
+
+		<p>Повесить обработчик на кнопку используя два способа</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Hide/Show</h2>
+		<ul>
+			<li>.hide()</li>
+			<li>.show()</li>
+			<li>.toggle()</li>
+		</ul>
+
+		<p>Создать три кнопки и блок с текстом. При нажатию на кнопку Скрыть, блок исчезает, Показать - отображается, Изменить - делает и то и другое</p>
+	</section>
+
+	<section class="slide">
+		<h2>Fading</h2>
+
+		<ul>
+			<li>.fadeIn(speed,callback);</li>
+			<li>.fadeOut(speed,callback);</li>
+		</ul>
+
+
+		<p>Создать блок с текстом и две нопки которые будуть отображать/скрывать блок с текстом на протяжении 1сек</p>
+	</section>
+
+	<section class="slide">
+		<h2>Sliding</h2>
+
+		<ul>
+			<li>.slideUp(speed,callback);</li>
+			<li>.slideDown(speed,callback);</li>
+			<li>.slideToggle(speed,callback);</li>
+		</ul>
+
+
+		<p>Сделать прошлое задание используя методы slide</p>
+	</section>
+
+	<section class="slide">
+		<h2>Animate</h2>
+
+		<ul>
+			<li>
+				.animate({params},speed,callback);
+			</li>
+		</ul>
+
+		<p>Создать анимацию</p>
+	</section>
+
+	<section class="slide">
+		<h2>Chaining</h2>
+
+		<p>Все матоды возвращают this.</p>
+
+		<ul>
+			<li>
+				$("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+			</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Applying</h2>
+
+		<p>Создать 10 элементов с классом test и текстом внутри. Поменять цвет во всех элементах на зеленый</p>
+	
+	</section>
+
+	<section class="slide">
+		<h2>AJAX</h2>
+
+		<div>
+			<img width="400px" src="./pictures/ajax.png" alt="">
+		</div>
+
+		<p>Отправить запрос на PokeAPI и вывести список 10 покемонов</p>
+
+	</section>
+
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

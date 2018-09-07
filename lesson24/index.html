@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #24</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+
+		<ul>
+			<li>TDD</li>
+			<li>BDD</li>
+			<li>e2e</li>
+			<li>Рефакторинг</li>
+			<li>Архитектура приложения</li>
+			<li>qUnit</li>
+		</ul>
+		
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>Переменные let и const</li>
+			<li>Деструктуризация</li>
+			<li>Классы</li>
+			<li>Итераторы</li>
+			<li>Генераторы</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Установка Gulp</h2>
+		<p class="ta-center">
+			<img width="150" src="pictures/gulp.png" alt="">
+		</p>
+		<p>
+			npm install -g gulp-cli <br>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Инициализация</h2>
+
+		<p>
+			npm init <br>
+			npm install --save-dev babel-core babel-preset-es2015 <br>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Конфигурация package.json</h2>
+		<p>
+			<img src="pictures/gulp1.jpg"> <br>
+			Благодаря этому, сборка запускается командой npm run gulp.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Создание в папке проекта файла .babelrc</h2>
+		<p>
+			<img src="pictures/gulp2.jpg"> <br>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Создание gulpfile с названием gulpfile.babel.js</h2>
+		<p>
+			<img src="pictures/gulp3.jpg" width="60%"> <br>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Переменные let и const</h2>
+
+		<p>
+			В ES2015 вместо var введены новые переменные let и сonst - константа<br>
+			Отличия let:
+			<ul>
+				<li>Область видимости переменной.</li>
+				<li>Переменная начинает существовать только после объявления.</li>
+				<li>Для каждой итерации в цикле создаётся своя переменная.</li>
+			</ul>
+			<br>
+			Создать переменные с помощью ключевых слов let и const и протестировать их свойства.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Деструктуризация</h2>
+
+		<p>
+			Деструктуризация подразумевает разбивку сложной структуры на простые части, в JS это массивы и объекты.
+			<br>
+			Для массивов: <br>
+			<img src="./pictures/arrays.jpg">
+		</p>
+	</section>
+
+	<section class="slide">
+		
+		<p>
+		  Для объектов: <br><br><br>
+			<img src="./pictures/obj1.jpg">
+		</p>
+	 
+	</section>
+
+	<section class="slide">
+		
+		<p>
+			<img src="./pictures/obj2.jpg" width="80%">
+			<br>
+			Реализовать два произвольных метода деструктуризации для массива и объекта. 
+
+			
+		</p>
+	 
+	</section>
+
+	<section class="slide">
+		<h2>Классы</h2>
+
+		<p>
+			Классы в JavaScript представляют собой синтаксический сахар над существующим в JavaScript механизмом прототипного наследования.
+			<br>
+			1. Объявление класса <br>
+			<img src="./pictures/class.jpg"> <br>
+			Также есть class expression<br>
+			2. Oбъявление класса не совершает подъём (hoisted) <br>
+			3. Статические методы <br>
+
+		</p>
+
+	</section>
+
+	<section class="slide">
+	
+		<p>
+			4. Наследование классов с помощью extends <br>
+			5. Обращение к родительскому классу с помощью super
+
+			<br><br>
+			Создать класс Человек и подкласс Студент. Использовать extends и super.
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Итераторы</h2>
+
+		<p>
+			Объект является итератором, если он умеет обращаться к элементам коллекции по одному за раз, при этом отслеживая свое текущее положение внутри этой последовательности. 
+			<ul style="font-size: 20px">
+				<li>Цикл for-of</li>
+				<li>Symbol.iterator</li>
+				<li>Конструкт Spread</li>
+				<li>Свой итератор с методом next(), возвращающий объект {done: Boolean, value: any}, где value – очередное значение, а done: true в конце.</li>
+			</ul>
+			Написать свой итератор.
+		</p>
+	
+	</section>
+
+	<section class="slide">
+		<h2>Генераторы</h2>
+
+		<p style="font-size: 20px;">
+			 Генераторы — это функции которые можно запустить, приостановить и возобновить на различных стадиях выполнения. По сути дела, эта специальная функция возвращает итератор.  <br>
+			<img src="./pictures/generator.jpg" width="60%">
+			<br>
+			Создать счетчик с помощью генератора.
+			
+		</p>
+	
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #10</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>NodeJS, npm</li>
+			<li>Grunt</li>
+			<li>Sass</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Было задано</h2>
+		<ul>
+			<li>Документация <a href="https://sass-lang.com/documentation/file.SASS_REFERENCE.html#media">Sass</a> </li>
+			<li>Скринкаст <a href="https://learn.javascript.ru/screencast/gulp#01-what-is-gulp">Gulp</a> </li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>Структура файлов при верстке</li>
+			<li>Связка BEM + Sass</li>
+			<li>Верстка макета с Sass</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Групировка свойств</h2>
+		<p>
+			font: {size: 15px, weight: 400} <br>
+			margin: {top: 10px, bottom: 200px}
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>BEM + Sass</h2>
+		<p>
+			.container {&__item: {color: red}}
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Основные файлы</h2>
+
+		<ul>
+			<li>variables.scss</li>
+			<li>mixins.scss</li>
+		</ul>
+
+		<p>Выделить основные цвета и сохранить в переменные <br> Выиделить повторяемые стили и прописать в миксины </p>
+	</section>
+
+	<section class="slide">
+		<h2>Выделение основных блоков и елементов</h2>
+		<ul>
+			<li>Создать main.scss</li>
+			<li>Создать файлы для частей страници header.scss, body.scss, footer.scss</li>
+			<li>Выделить компоненты в каждом блоке </li>
+			<li>Создать файл для каждого компонента и подключить в соответствующий блок</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Верстка на Sass</h2>
+		<p>
+			Продолжить верстку <a href="https://freebiesbug.com/psd-freebies/mogo-free-one-page-psd-template/">макета</a>
+			ипользуя Sass + Bem
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Домашка</h2>
+		<ul>
+			<li>Продолжить верстку макета</li>
+			<li>Выложить результаты на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+			<li>Читать <a href="https://learn.javascript.ru/getting-started">здесь</a> и <a href="https://learn.javascript.ru/hello-world">здесь</a> </li>
+		</ul>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

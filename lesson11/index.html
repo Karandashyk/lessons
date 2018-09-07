@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #11</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>Структура файлов при верстке</li>
+			<li>Связка BEM + Sass</li>
+			<li>Верстка макета с Sass</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Было задано</h2>
+		<ul>
+			<li>Продолжить верстку макета</li>
+			<li>Выложить результаты на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+			<li>Читать <a href="https://learn.javascript.ru/getting-started">здесь</a> и <a href="https://learn.javascript.ru/hello-world">здесь</a> </li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>Что такое JavaScript</li>
+			<li>Подключение</li>
+			<li>Стандарты</li>
+			<li>Переменные</li>
+			<li>Типы данных</li>
+			<li>Взаимодействие с пользователем</li>
+			<li>Операторы сравнения, побитовые</li>
+			<li>Условные опереторы</li>
+			<li>Преобразование типов</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>JavaScript</h2>
+		<p>
+			<ul>
+				<li>Интерпретируемый скриптовый язык</li>
+				<li>Дата создания - 1995 г.</li>
+				<li>Среда выполнения - браузер (Node.js - ОС)</li>
+			</ul>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Подключение</h2>
+
+		<p>
+		<ul>
+			<li>Тэг < script > ... < /script > </li>
+			<li>Подключение с помощью файла</li>
+			<li>Подключение в head</li>
+			<li>Подключение в body</li>
+		</ul>
+
+		Подключить и выполнить JavaScript:  alert("Hello World!");
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Стандарты</h2>
+
+		<p>
+		<ul>
+			<li>Точка с запятой</li>
+			<li>Комментарии</li>
+			<li>camalCase</li>
+			<li>use strict</li>
+		</ul>
+
+		Подключить и выполнить JavaScript:  <br>
+		"use strict"; <br>
+		// Вывожу Hello World в окне <br>
+		alert("Hello World!")
+
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Переменные</h2>
+
+		<p>
+		<ul>
+			<li>Директива var </li>
+			<li>Допустимые имена переменных</li>
+			<li>Важность var</li>
+			<li>Константы</li>
+			<li>Инкапсулируемые переменные*</li>
+
+	</ul>
+
+		Создать переменную, хранящую строку "Hello World!" и вывести ее в окне
+ 		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Типы данных</h2>
+
+		<p>
+		<ul>
+			<li>Number</li>
+			<li>String</li>
+			<li>Boolean</li>
+			<li>Null</li>
+			<li>Undefined</li>
+			<li>Object</li> <br>
+
+			<li>Оператор typeof</li>
+
+		</ul>
+
+		Создать переменные, которые хранят имя, возраст и ничего
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Взаимодействие с пользователем</h2>
+
+		<p>
+		<ul>
+			<li>alert</li>
+			<li>prompt</li>
+			<li>confirm</li>
+		</ul>
+
+		Сделать запрос к пользователю на произвольное число и вывести его
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Операторы</h2>
+
+		<p>
+		<ul>
+			<li>Присвоение</li>
+			<li>Сравнение</li>
+			<li>Побитовые</li>
+			<li>Условные операторы</li>
+		</ul>
+
+		Сделать запрос к пользователю на произвольное число, если число больше 100, то вывести результат от деления на 5,
+		если меньше, то инкрементированое на 1
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Преобразование типов</h2>
+
+		<p>
+		<ul>
+			<li>Строковое преобразование</li>
+			<li>Численное преобразование</li>
+			<li>К логическому значению</li>
+			<li>С использованием конструкторов</li>
+
+		</ul>
+
+		Создать переменную, хранящую строку "123Panda", выделить из нее численную часть и вывести
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Домашка</h2>
+		<ul>
+			<li>Документация <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript</a> </li>
+			<li>И еще одна <a href="https://learn.javascript.ru">книга про JavaScript</a> </li>
+			<li>Запросить у пользователя какую операцию он желает выполнить (add, subtract, divide, multiply), далее
+			запросить два числа для выполнения операции, выполнить операцию и вывести результат</li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+		</ul>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

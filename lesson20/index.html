@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #20</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>Объектная модель документа - DOM</li>
+			<li>Дерево и элементы DOM</li>
+			<li>Навигация по DOM</li>
+			<li>Поисковые методы</li>
+			<li>Атрибуты и свойства DOM</li>
+			<li>Добавление и удаление узлов</li>
+		</ul>
+		
+	</section>
+
+	<section class="slide">
+		<h2>Было задано</h2>
+		<UL>
+			<li> Освоить<a href="https://devionity.com/ru/courses/js-fundamentals-and-jquery">DOM, events</a> </li>
+			<li><a href="https://docs.google.com/document/d/1UYQKGlYDOnyP3g8jSoG-8hAq0-WV2m20D7K0csVgLZU/edit?usp=sharing">Задача</a></li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+		</UL>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>Браузерные события и их обработка</li>
+			<li>Объекты событий, всплывание и перехват событий</li>
+			<li>События мыши (клики, движение, прокрутка, drag'n'drop)</li>
+			<li>События клавиатуры (keyup, keydown, keypress)</li>
+			<li>Загрузка документа (DOMContentLoaded, load, beforeunload, unload)</li>
+			<li>Загрузка скриптов, графики, фреймов (onload, onerror)</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Браузерные события и их обработка</h2>
+
+		<p style="font-size: 20px;">
+			Событие – это сигнал от браузера о том, что что-то произошло. <br>
+			Существует много видов событий. (События мыши, на элементах управления, клавиатурные события и т.д.)<br>
+			Есть два способа отменить действие по умолчанию: первый – использовать event.preventDefault() (IE8-: event.returnValue=false), второй – return false из обработчика. Второй способ работает только если обработчик назначен через onсобытие.
+			<br>
+			Событию можно назначить обработчик, то есть функцию, которая сработает, как только событие произошло.<br>
+			Именно благодаря обработчикам JavaScript-код может реагировать на действия посетителя. Есть несколько способов назначить событию обработчик. 
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Использование атрибута HTML</h2>
+
+		<p>
+			Обработчик может быть назначен прямо в разметке, в атрибуте, который называется on<событие>. <br> <br>
+			< input value="Нажми меня" onclick="alert('Клик!')" type="button"> <br>
+			
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Использование свойства DOM-объекта</h2>
+
+		<p>
+			Можно назначать обработчик, используя свойство DOM-элемента on<событие>.
+			<br>
+			<div style="font-size: 18px;">
+			< input id="elem" type="button" value="Нажми меня" /> <br>
+			< script><br>
+			  elem.onclick = function() {<br>
+			    alert( 'Спасибо' );<br>
+			  };<br>
+			< /script><br>
+			</div>
+			Так как DOM-свойство onclick, в итоге, одно, то назначить более одного обработчика так нельзя.
+
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Доступ к элементу через this</h2>
+
+		<p>
+			Внутри обработчика события this ссылается на текущий элемент, то есть на тот, на котором он сработал. <br>
+
+			< button onclick="alert(this.innerHTML)">Нажми меня</button>
+
+		</p>
+	</section>
+
+	<section class="slide">
+
+		<p>
+		  Важно!
+		  <ul>
+		  	<li>Функция должна быть присвоена как sayThanks, а не sayThanks().</li>
+		  	<li>Не используйте setAttribute.</li>
+		  	<li>Регистр DOM-свойства имеет значение.</li>
+		  </ul>
+		</p>
+	 
+	</section>
+
+	<section class="slide">
+		<h2>addEventListener и removeEventListener</h2>
+
+		<p>
+			Методы addEventListener и removeEventListener являются современным способом назначить или удалить обработчик, и при этом позволяют использовать сколько угодно любых обработчиков. <br>
+			Назначение обработчика осуществляется вызовом addEventListener с тремя аргументами: element.addEventListener(event, handler[, phase]); <br>
+			<ul style="font-size: 18px;">
+				<li>event - Имя события, например click</li>
+				<li>handler - Ссылка на функцию, которую надо поставить обработчиком.</li>
+				<li>phase - Необязательный аргумент, «фаза», на которой обработчик должен сработать.</li>
+			</ul>
+			
+		</p>
+	</section>
+
+
+	<section class="slide">
+		<h2>Порядок обработки событий</h2>
+
+		<p style="font-size: 20px;">
+			События могут возникать не только по очереди, но и «пачкой» по много сразу.
+			<br>
+			В каждом окне выполняется только один главный поток, который занимается выполнением JavaScript, отрисовкой и работой с DOM. Он выполняет команды последовательно, может делать только одно дело одновременно и блокируется при выводе модальных окон, таких как alert. Есть и другие, служебные потоки, например, для сетевых коммуникаций, но управлять ими мы не можем. 
+			<br>
+			Когда происходит событие, оно попадает в очередь. При этом каждое событие из очереди обрабатывается полностью отдельно от других.
+
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Объект события</h2>
+
+		<p >
+			Детали произошедшего события браузер записывает в «объект события», который передаётся первым аргументом в обработчик. <br>
+			elem.onclick = function(event) {}<br>
+			Свойства объекта event: <br>
+			<ul>
+				<li>event.type</li>
+				<li>event.currentTarget</li>
+				<li>event.clientX / event.clientY</li>
+				<li>и т.д. в зависимости от типа события</li>
+			</ul><br>
+
+			Сделать круглый DIV (d = 50px) и верхнем правом углу окна. Перемещать его на место курсора по клику мыши.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Всплытие и перехват</h2>
+
+		<p>
+			При наступлении события обработчики сначала срабатывают на самом вложенном элементе, затем на его родителе, затем выше и так далее, вверх по цепочке вложенности.<br>
+			Самый глубокий элемент, который вызывает событие, называется «целевым» или «исходным» элементом и доступен как event.target. (В IE8- используется event.srcElement)<br>
+			Для остановки всплытия нужно вызвать метод event.stopPropagation() или event.stopImmediatePropagation() (В IE8- используется код event.cancelBubble=true).
+	</section>
+
+	<section class="slide">
+		<h2>Делегирование событий</h2>
+
+		<p style="font-size: 22px;">
+			Всплытие событий позволяет реализовать один из самых важных приёмов разработки – делегирование.<br>
+
+			Он заключается в том, что если у нас есть много элементов, события на которых нужно обрабатывать похожим образом, то вместо того, чтобы назначать обработчик каждому – мы ставим один обработчик на их общего предка. Из него можно получить целевой элемент event.target, понять на каком именно потомке произошло событие и обработать его.<br>
+
+
+			Создать 3 вложеных DIV елемента. Повесить на них обработку на клик при погружении и при всплывании c помощью делегирования. Проследить разницу.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Генерация событий на элементах</h2>
+
+		<p style="font-size: 20px;">
+			Можно не только назначать обработчики на события, но и генерировать их самому. <br>
+			var event = new Event(тип события[, флаги]); <br>
+			elem.dispatchEvent(event);<br>
+			На сгенерированном событии, как и на встроенном браузерном, обработчик может вызвать метод event.preventDefault() - предотвращает действие браузера. <br>
+			При создании события браузер автоматически ставит следующие свойства:
+			<ul style="font-size: 18px;">
+				<li>isTrusted: false – означает, что событие сгенерировано скриптом, это свойство изменить невозможно.</li>
+				<li>target: null – это свойство ставится автоматически позже при dispatchEvent.</li>
+				<li>type: тип события – первый аргумент new Event.</li>
+				<li>bubbles, cancelable – по второму аргументу new Event.</li>
+			</ul>
+		
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>События мыши</h2>
+
+		<p style="font-size: 20px;">
+			<ul>
+				<li>mousedown, mouseup, mouseover, mouseout, mousemove</li>
+				<li>click, contextmenu, dblclick</li>
+				<li>Which
+					<ul>
+						<li>event.which == 1 – левая кнопка</li>
+						<li>event.which == 2 – средняя кнопка</li>
+						<li>event.which == 3 – правая кнопка</li>
+					</ul>
+				</li>
+				<li>Модификаторы shift, alt, ctrl и meta</li>
+				<li>wheel, scroll</li>
+				<li>Координаты в окне: clientX/Y </li>
+				<li>Относительно документа: pageX/Y</li>
+			</ul>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Движение мыши. Важно!</h2>
+
+		<p style="font-size: 22px;">
+			event.relatedTarget - элемент, на который перешла мышь или с которого пришла. <br><br>
+			Если посетитель двигает мышью быстро, то DOM-элементы, через которые мышь проходит на большой скорости, могут быть пропущены. <br><br>
+			При переходе на потомка срабатывает mouseout на родителе. <br><br>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>События mouseenter и mouseleave</h2>
+
+		<p>
+			События mouseenter/mouseleave похожи на mouseover/mouseout. <br>
+			Но с двумя отличиями:
+			<ul>
+				<li>Не учитываются переходы внутри элемента.</li>
+				<li>События mouseenter/mouseleave не всплывают.</li>
+			</ul>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>События клавиатуры</h2>
+
+			<ul style="font-size: 20px;">
+				<li>keydown, keypress, keyup</li>
+				<li>keyCode, charCodeAt, charCode, which</li>
+				<li>getChar(event)</li>
+				<li>shiftKey, ctrlKey, altKey и metaKey</li>
+			</ul>
+			Важно! 
+			<ul style="font-size: 18px;">
+				<li>Ловля CapsLock глючит под MacOS. Её можно организовать при помощи проверки navigator.userAgent и navigator.platform, а лучше вообще не трогать эту клавишу.</li>
+				<li>На момент срабатывания keydown/keypress клавиша ещё не обработана браузером.</li>
+				<li>Если нужен именно символ – используем keypress. При этом функция getChar позволит получить символ и отфильтровать лишние срабатывания. </li>
+			</ul>
+	</section>
+
+	<section class="slide">
+		<p>
+			При помощи событий клавиатуры сделать так, чтобы в поле можно было вводить только цифры. 
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Загрузка документа</h2>
+
+		<p>
+			Процесс загрузки HTML-документа, условно, состоит из трёх стадий:
+			<ul style="font-size: 20px;">
+				<li>1. DOMContentLoaded – браузер полностью загрузил HTML и построил DOM-дерево. 
+				Обработчик: <br>
+				document.addEventListener("DOMContentLoaded", ready);</li>
+				Исключением являются скрипты с атрибутами async и defer, которые подгружаются асинхронно.
+				<li>2. load – браузер загрузил все ресурсы.</li>
+				<li>3. beforeunload/unload – уход со страницы.</li>
+			</ul>
+		</p>
+	</section>
+
+	<section class="slide">
+		<p>
+			<ul style="font-size: 20px;">
+				<li>window.onload - Событие onload на window срабатывает, когда загружается вся страница, включая ресурсы на ней – стили, картинки, ифреймы и т.п.</li>
+				<li>window.onunload - Когда человек уходит со страницы или закрывает окно, на window срабатывает событие unload. В нём можно сделать что-то, не требующее ожидания, например, закрыть вспомогательные popup-окна, но отменить сам переход нельзя.</li>
+				<li>window.onbeforeunload - Если посетитель инициировал переход на другую страницу или нажал «закрыть окно», то обработчик onbeforeunload может приостановить процесс и спросить подтверждение.</li>
+			</ul>
+		</p>
+	</section>
+
+	<section class="slide">
+		<p>
+			Создать функцию preloadImages(sources, callback), которая предзагружает изображения из массива sources, и после загрузки вызывает функцию callback.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Загрузка скриптов, картинок, фреймов</h2>
+
+		<p>
+			Браузер позволяет отслеживать загрузку внешних ресурсов – скриптов, ифреймов, картинок и других.
+			<br>
+			Для этого есть два события:
+			<ul style="font-size: 20px;">
+				<li>onload – если загрузка успешна.</li>
+				<li>onerror – если при загрузке произошла ошибка.</li>
+			</ul>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Домашка</h2>
+		<ul>
+			<li>Читать <a href="https://learn.javascript.ru/events-and-interfaces">Здесь</a> </li>
+			<li>В цикле создать десять кнопок в качестве текста у которых указан индекс итерации. <br>
+				Также в цикле повесить обработчик. <br>
+				При нажатии на кнопку, должен появиться alert с индексом итерации.</li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+		</ul>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>

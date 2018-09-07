@@ -1,0 +1,83 @@
+<table class="standard-table" style="border: 2px solid #ffd;">
+ <thead>
+  <tr>
+   <th style="border: 2px solid #ffd;">JavaScript код</th>
+   <th style="border: 2px solid #ffd;">Метод обработчика</th>
+   <th style="border: 2px solid #ffd;">Описание</th>
+  </tr>
+ </thead>
+ <tbody style="border: 2px solid #ffd;">
+  <tr>
+   <td style="border: 2px solid #ffd;"><code>Object.getOwnPropertyDescriptor(proxy, name)</code></td>
+   <td style="border: 2px solid #ffd;"><code><strong>getOwnPropertyDescriptor</strong><br>
+    function(target, name) -&gt; PropertyDescriptor | undefined</code></td>
+   <td style="border: 2px solid #ffd;">Должен возвращать верный объект-описание свойства или&nbsp;<code>undefined</code>, чтобы показать, что свойство с именем&nbsp;<code>name</code> существует в эмулируемом объекте.</td>
+  </tr>
+  <tr>
+   <td style="border: 2px solid #ffd;">
+    <p><code>Object.getOwnPropertyNames(proxy)</code><br>
+     <code><code>Object.getOwnPropertySymbols(proxy)</code></code><br>
+     <code><code><code>Object.keys(proxy)</code></code></code></p>
+   </td>
+   <td style="border: 2px solid #ffd;"><code><code><strong>ownKeys</strong></code> function(target) -&gt; [string | symbol]</code></td>
+   <td style="border: 2px solid #ffd;">Возвращает массив всех собственных (не унаследованных) имён свойств эмулируемого объекта.</td>
+  </tr>
+  <tr>
+   <td style="border: 2px solid #ffd;"><code>Object.defineProperty(proxy,name,pd)</code></td>
+   <td style="border: 2px solid #ffd;"><code><strong>defineProperty</strong> function(target, name, propertyDescriptor) -&gt; any</code></td>
+   <td style="border: 2px solid #ffd;">Задаёт новое свойство, атрибуты которого определяются предоставленным&nbsp;<code>propertyDescriptor</code>. Возвращаемое значение метода игнорируется.</td>
+  </tr>
+  <tr>
+   <td style="border: 2px solid #ffd;"><code>delete proxy.name</code></td>
+   <td style="border: 2px solid #ffd;"><code><strong>deleteProperty</strong> function(target, name) -&gt; boolean</code></td>
+   <td style="border: 2px solid #ffd;">Удаляет именованное свойство из прокси. Возвращает <code>true</code>&nbsp;в случае успешного удаления свойства&nbsp;<code>name</code>.</td>
+  </tr>
+  <tr>
+   <td style="border: 2px solid #ffd;"><code>Object.preventExtensions(proxy)</code></td>
+   <td style="border: 2px solid #ffd;"><code><strong>preventExtensions</strong> function(target) -&gt; boolean</code></td>
+   <td style="border: 2px solid #ffd;">Делает объект нерасширяемым. Возвращает <code>true</code> при успешном выполнении.</td>
+  </tr>
+  <tr>
+   <td style="border: 2px solid #ffd;"><code>for(let prop in proxy) { alert(prop); }</code></td>
+   <td style="border: 2px solid #ffd;"><code><strong>enumerate</strong> function(target) -&gt; Symbol.iterator</code></td>
+   <td style="border: 2px solid #ffd;">&nbsp;</td>
+  </tr>
+  <tr>
+   <td style="border: 2px solid #ffd;"><code>name in proxy</code></td>
+   <td style="border: 2px solid #ffd;"><code><strong>has</strong> function(target, name) -&gt; boolean</code></td>
+   <td style="border: 2px solid #ffd;">срабатывает при вызове for..in или for..of, возвращает итератор для свойств объекта.</td>
+  </tr>
+  <tr>
+   <td style="border: 2px solid #ffd;">
+    <p><code>proxy.name</code> (in the context of "getting the value")</p>
+
+    <p><code>receiver.name</code> (if <code>receiver</code> inherits from a proxy and does not override <code>name</code>)</p>
+   </td>
+   <td style="border: 2px solid #ffd;"><code><strong>get</strong> function(target, name, receiver) -&gt; any</code></td>
+   <td style="border: 2px solid #ffd;"><code>receiver</code>&nbsp;— это прокси или объект, унаследованный от прокси.</td>
+  </tr>
+  <tr>
+   <td style="border: 2px solid #ffd;">
+    <p><code>proxy.name = val</code> (in the context of "setting the value")</p>
+
+    <p><code>receiver.name = val</code> (if <code>receiver</code> inherits from a proxy and does not override <code>name</code>)</p>
+   </td>
+   <td style="border: 2px solid #ffd;"><code><strong>set</strong> function(target, name, val, receiver) -&gt; boolean</code></td>
+   <td style="border: 2px solid #ffd;"><code style="font-style: normal;">receiver</code>&nbsp;— это прокси или объект, унаследованный от прокси.</td>
+  </tr>
+  <tr>
+   <td style="border: 2px solid #ffd;">
+    <p><code>proxy(...args)<br>
+     proxy.apply(thisValue, args)<br>
+     proxy.call(thisValue, ...args)</code></p>
+   </td>
+   <td style="border: 2px solid #ffd;"><code><strong>apply</strong> function(target, thisValue, args) -&gt; any</code></td>
+   <td style="border: 2px solid #ffd;"><code>target</code>&nbsp;должен быть функцией.</td>
+  </tr>
+  <tr>
+   <td style="border: 2px solid #ffd;"><code>new proxy(...args)</code></td>
+   <td style="border: 2px solid #ffd;"><code><strong>construct</strong> function(target, args) -&gt; object</code></td>
+   <td style="border: 2px solid #ffd;"><code>target</code>&nbsp;должен быть функцией.</td>
+  </tr>
+ </tbody>
+</table>

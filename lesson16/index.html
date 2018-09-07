@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #16</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>Call</li>
+			<li>Apply</li>
+			<li>Bind</li>
+			<li>JSON</li>
+			<li>Try catch</li>
+			<li>Начало ООП</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Было задано</h2>
+		<ul>
+			<li>Освоить <a href="https://learn.javascript.ru/prototypes">здесь</a></li>
+			<li>Вывести поэлементно arguments через forEach</li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>__proto__</li>
+			<li>prototype</li>
+			<li>Цепочка прототипов</li>
+			<li>Методы  в prototype</li>
+			<li>Наследование в JS</li>
+			<li>jsDOC</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>__proto__</h2>
+		<p>
+			<ul>
+				<li>var human = {name: 'Test'}</li>
+				<li>var student = {name: 'Test2'}</li>
+				<li>student.__proto__ = human</li>
+			</ul>
+
+			<p>Проверить удаление name дважды</p>
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Prototype</h2>
+		<p>
+			<ul>
+				<li>Объект для хранения общих свойств и методов для всех экземпляров</li>
+			</ul>
+
+			<p>Создать два экземпляра Human с полем name и методом sayName в прототипе</p>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Методы встроенных конструкторов</h2>
+
+		<p>
+		<ul>
+			<li>Object(toString, ...)</li>
+			<li>Array(forEach, ...)</li>
+			<li>String(split)</li>
+		</ul>
+
+		<p>Переопределить метод toString для экземпляра</p>
+
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Arguments</h2>
+
+		<p>
+			<ul>
+				<li>Методы в прототипе arguments</li>
+			</ul>
+ 		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Наследование в JS</h2>
+
+		<ul>
+			<li>Object.create</li>
+			<li>apply</li>
+		</ul>
+
+		<img src="pictures/inheritance.jpg" width="40%" style="position: absolute; top:30%; right: 30%">
+	</section>
+
+	<section class="slide">
+		<h2>jsDOC</h2>
+
+		<ul>
+			<li>@name</li>
+			<li>@param</li>
+			<li>@return</li>
+		</ul>
+
+		<p>Дописать документацию к коду</p>
+	</section>
+
+	<section class="slide">
+		<h2>Домашка</h2>
+		<ul>
+			<li>Повторить изученный материал</li>
+			<li>Перенести внутренние методы в прототип в<a href="https://docs.google.com/document/d/17wtQMvqojuxbogxmXsuQVqB1boIydABtWANFpBVUh54/edit?usp=sharing">задании</a> </li>
+			<li>Выложить код на GitLab</li>
+			<li>Пригласить преподавателя для CodeReview</li>
+		</ul>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>
